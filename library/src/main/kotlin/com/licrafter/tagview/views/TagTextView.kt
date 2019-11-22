@@ -3,6 +3,7 @@ package com.licrafter.tagview.views
 import android.content.Context
 import android.graphics.Color
 import android.util.AttributeSet
+import android.view.Gravity
 import android.widget.TextView
 import com.licrafter.tagview.DIRECTION
 import com.licrafter.tagview.R
@@ -25,6 +26,8 @@ class TagTextView : TextView, ITagView {
         setBackgroundResource(R.drawable.text_drawable)
         setPadding(DipConvertUtils.dip2px(getContext(), 12f), DipConvertUtils.dip2px(getContext(), 4f), DipConvertUtils.dip2px(getContext(), 12f), DipConvertUtils.dip2px(getContext(), 4f))
     }
+
+
 
     override fun getDirection(): DIRECTION {
         return mDirection ?: throw RuntimeException("TagTextView has no direction")

@@ -4,6 +4,7 @@ import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
 import android.content.Context;
 import android.util.AttributeSet;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -120,6 +121,7 @@ public class TagImageView extends FrameLayout {
         TagTextView tagTextView = new TagTextView(getContext());
         tagTextView.setDirection(DirectionUtils.getDirection(tag.getDirection()));
         tagTextView.setText(tag.getName());
+        tagTextView.setGravity(Gravity.CENTER);
         return tagTextView;
     }
 
